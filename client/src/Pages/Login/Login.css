@@ -1,0 +1,18 @@
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.login-field {
+    width: 600px;
+}
+
+.sign-button button{
+    width: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

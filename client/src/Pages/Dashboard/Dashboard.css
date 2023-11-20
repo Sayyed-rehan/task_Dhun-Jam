@@ -1,0 +1,50 @@
+
+
+.dashboard-container{
+    /* font-family:Poppins; */
+    
+}
+.dashboard-grid{
+    margin-top: 10px;
+}
+
+.grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid1{
+    text-align: left;
+    /* width: fit-content; */
+}
+
+.grid-2-2{
+  
+}
+
+.grid-2-2 input{
+    text-align: center;
+}
+.disabled-text-field {
+    color: red;
+    /* background-color: #C2C2C2; */
+  }
+
+/* .grid-2-1 bu */
+
+
+.chart-container{
+    width: 600px;
+    margin-top: 40px;
+    /* background-color: aqua; */
+}
+
+.save-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin-top: 15px;
+}
+
