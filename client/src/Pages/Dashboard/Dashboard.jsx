@@ -52,7 +52,7 @@ const Dashboard = () => {
     };
 
     console.log('ass',checkYesOrNo);
-    const datas = Object.keys(userData && userData.id==4?userData?.amount:0).map((key) => {
+    const datas = Object.keys(userData && userData.id==id?.id?userData?.amount:0).map((key) => {
         return { name: key, amount: userData.amount[key] };
       });
       
@@ -66,7 +66,7 @@ const Dashboard = () => {
 
 
     const handleSave = async()=>{
-        const responce = await axios.put("https://stg.dhunjam.in/account/admin/4",{
+        const responce = await axios.put(`https://stg.dhunjam.in/account/admin/${id?.id}`,{
             amount:updateValues
         })
         console.log(responce.data.data);
@@ -104,7 +104,7 @@ const Dashboard = () => {
 
             
             <Box className="grid-2-1">
-            {userData && userData.id==4?
+            {userData && userData.id==id?.id?
             <FormControl>
                 <RadioGroup row defaultValue={ userData.charge_customers==true?"yes":"no"} >
                     <FormControlLabel value="yes" control={<Radio sx={{color: "white",'&.Mui-checked': {color: "#6741D9",},
@@ -137,7 +137,7 @@ const Dashboard = () => {
             </Box>
 
             <Box>
-            {userData && userData.id==4?
+            {userData && userData.id==id?.id?
             Object.keys(updateValues).map((x,i)=>{
                 if(i>0){
                 return (<><TextField disabled={checkYesOrNo=="No"} value={updateValues[x]} name={x} onChange={handleUpdateValues} size="small" sx={Stylinging}/></>)
